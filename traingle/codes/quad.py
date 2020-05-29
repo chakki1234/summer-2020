@@ -9,7 +9,7 @@ import shlex
 #Sides
 ac = 5
 ad = 5
-length_of_bis = 6
+lamda = 6
 
 #Angles
 angA = 80
@@ -18,7 +18,7 @@ angA = 80
 A = np.array([0, 0])
 C = np.array([ac, 0])
 D = np.array([ad * np.cos(np.pi / 180 * angA), ad * np.sin(np.pi / 180 * angA)])
-B = A + angleBisector(A, C, D) * length_of_bis 
+B = A + angleBisector(A, C, D) * lamda
 
 print(A, C, B, D)
 

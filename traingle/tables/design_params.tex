@@ -64,9 +64,7 @@
        \usepackage{multirow}
        \usepackage{hhline}
        \usepackage{ifthen}
-	   \usepackage[cmex10]{amsmath}
-       \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
-       
+
 	\begin{document}
 
 
@@ -125,8 +123,8 @@
 \setlongtables
 
 \setlength\gnumericTableWidth{%
-	67pt+%
-	70pt+%
+	76pt+%
+	81pt+%
 0pt}
 \def\gumericNumCols{2}
 \setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
@@ -146,8 +144,8 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{67pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{70pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{76pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{81pt*\gnumericScale}@{}}x\end{tabular}}
 
 \begin{tabular}[c]{%
 	b{\gnumericColA}%
@@ -188,7 +186,7 @@
 	 \multicolumn{2}{|p{	\gnumericColA+%
 	\gnumericColB+%
 	\tabcolsep*2*1}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{Design Parameters}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{     Design Parameters}}
 \\
 \hhline{|-|-|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
@@ -210,7 +208,7 @@
 \\
 \hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{AB}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{$\lambda$}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedleft}\gnumbox[r]{6}}
 \\

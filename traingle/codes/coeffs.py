@@ -99,7 +99,12 @@ def angleBisector(A, B, C):
   temp_ang_bis = dir_vec(A,C)/b + dir_vec(A,B)/a
   return temp_ang_bis
 
-
+def inncenter(A,B,C):
+  a = np.linalg.norm(dir_vec(C,B))
+  b = np.linalg.norm(dir_vec(C,B))
+  c = np.linalg.norm(dir_vec(C,B))
+  return (a * A + b * B + c * C)/(a + b + c)
+  
 dvec = np.array([-1,1]) 
 #Orthogonal matrix
 omat = np.array([[0,1],[-1,0]]) 

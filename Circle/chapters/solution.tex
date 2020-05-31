@@ -1,26 +1,43 @@
 \begin{theorem}\label{theorem:th1}
 In a cyclic quadrilateral, the sum of each pair of opposite angles is $180\degree$.
 \end{theorem}
-\solution  From theorem \ref{theorem:th1} to prove $ABCD$ is a cyclic quadilateral, it is sufficient to prove that sum of opposite angles is $180\degree$. \\ \\
-In $\triangle ADP_1\ and\  \triangle BCP_2$
+\solution  From theorem \ref{theorem:th1} to prove $ABCD$ is a cyclic quadilateral, it is sufficient to prove that sum of opposite angles is $180\degree$. \\ 
+
+From \ref{eq:constr_a}, \ref{eq:constr_b}, \ref{eq:constr_c}, \ref{eq:constr_d}
 \begin{align}
-\angle AP_1D &= \angle BP_2C \nonumber \\
-P_1D &= P_2C \nonumber \\
-AD &= BC \nonumber \\
-\therefore \triangle ADP_1\  &\cong\  \triangle BCP_2  \nonumber \\
-\implies \angle A \ &=\ \angle B \label{eq:solution}
+\vec{B} - \vec{A} &= \myvec{b\\0}\label{eq:dir1}\\
+\vec{D} - \vec{C} &= \myvec{2h\cot{\theta}-b\\0}\label{eq:dir2}\\
+\vec{D} - \vec{A} &= \myvec{h\cot{\theta}\\h}\label{eq:dir3}\\
+\vec{B} - \vec{C} &= \myvec{h\cot{\theta}\\-h}\label{eq:dir4}
 \end{align}
 
-Since $AB\ || \ DC$ 
+Finding the scalar products:
 \begin{align}
-\angle A + \angle D &= 180\degree \\
-\angle B + \angle C &= 180\degree 
+\brak{\vec{D} - \vec{A}}^T\brak{\vec{B} - \vec{A}} &= \|\vec{D}-\vec{A} \|\ 
+\| \vec{B}-\vec{A} \| \cos{\theta}\label{eq:scalar1}\\
+\brak{\vec{D} - \vec{C}}^T\brak{\vec{B} - \vec{C}} &= \|\vec{D}-\vec{C} \|\ 
+\| \vec{B}-\vec{C} \| \cos{\alpha}\label{eq:scalar2}
+\end{align}\\
+
+Dividing \ref{eq:scalar2} with \ref{eq:scalar1}:
+\begin{align}
+\frac{\brak{\vec{D} - \vec{A}}^T\brak{\vec{B} - \vec{A}}}{\brak{\vec{D} - \vec{C}}^T\brak{\vec{B} - \vec{C}}} &= \frac{\|\vec{D}-\vec{A} \|\ 
+\| \vec{B}-\vec{A} \| \cos{\theta}}{\|\vec{D}-\vec{C} \|\ 
+\| \vec{B}-\vec{C} \| \cos{\alpha}}\label{eq:scalar3}
+\end{align}\\
+
+\begin{flushleft}
+Since $\| \vec{D} - \vec{A} \| = \| \vec{B} - \vec{C} \|$, \ref{eq:scalar3} can be simplified to the form:
+\end{flushleft}
+\begin{align}
+\frac{\brak{\vec{D} - \vec{A}}^T\brak{\vec{B} - \vec{A}}}{\brak{\vec{D} - \vec{C}}^T\brak{\vec{B} - \vec{C}}} &= \frac{\| \vec{B}-\vec{A} \| \cos{\theta}}{\|\vec{D}-\vec{C} \|\cos{\alpha}}
+\end{align}\\
+
+Substituting values from \ref{eq:dir1}, \ref{eq:dir2}, \ref{eq:dir3} and \ref{eq:dir4}:
+\begin{align}
+\frac{bh\cot{\theta}}{\brak{2h\cot{\theta}-b}h\cot{\theta}} &= \frac{b\cos{\theta}}{b-2h\cot{\theta}}\\
+\implies\cos{\alpha} &= -\cos{\theta}\\
+\implies \alpha + \theta &= 180\degree
 \end{align}
 
-From equation \ref{eq:solution}:
-
-\begin{align}
-\angle B + \angle D &= 180\degree \\
-\angle A + \angle C &= 180\degree 
-\end{align}
 $\therefore ABCD$ is a cyclic quadilateral.

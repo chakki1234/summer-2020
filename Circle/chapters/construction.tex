@@ -23,13 +23,13 @@
 \item Find the coordinates of the various points in Fig
 \begin{align}
 \vec{A} &=\myvec{0\\0} \label{eq:constr_a}\\
-\vec{B} &=\vec{A} + \myvec{a\\0}, \label{eq:constr_b}\\ 
-\vec{AP_1} = -\vec{BP_2} &= \myvec{h\cot{\theta}\\0}\label{eq:constr_ap1}\\
-\vec{P_1D} = \vec{P_2C} &= \myvec{0\\h}\label{eq:constr_bp2}
+\vec{B} &=\vec{A} + \myvec{b\\0}, \label{eq:constr_b}
 \end{align}
 \begin{align}
-\vec{C} &= \vec{B} - \vec{BP_2} + \vec{P_2C}\label{eq:constr_c}\\
-\vec{D} &= \vec{A} + \vec{AP_1} + \vec{P_1D}\label{eq:constr_d}
+\vec{C} &= \vec{B} + \myvec{-h\cot{\theta}\\h}\\
+\implies \vec{C} &= \myvec{b - h\cot{\theta}\\h}\label{eq:constr_c}\\ 
+\vec{D} &= \vec{A} + \myvec{h\cot{\theta}\\h}\\
+\implies \vec{D} &= \myvec{h\cot{\theta}\\h}\label{eq:constr_d}			
 \end{align}
 
 \item
@@ -42,7 +42,8 @@ The values are listed in \ref{table:table2}\\
 \label{table:table2}	
 \end{table} 
 
-\vskip75pt 
+\newpage
+
 \item Draw Fig. \ref{fig:trapezium}.
 
 \begin{figure}[!ht]

@@ -1,5 +1,5 @@
 import numpy as np
-
+import math
 
 def dir_vec(A,B):
   return B-A
@@ -99,12 +99,17 @@ def angleBisector(A, B, C):
   temp_ang_bis = dir_vec(A,C)/b + dir_vec(A,B)/a
   return temp_ang_bis
 
-def inncenter(A,B,C):
-  a = np.linalg.norm(dir_vec(C,B))
-  b = np.linalg.norm(dir_vec(C,B))
-  c = np.linalg.norm(dir_vec(C,B))
-  return (a * A + b * B + c * C)/(a + b + c)
-  
+def findingTheThirdCoord(side_length, angA, angB): 
+  a = 1 - (np.cos(np.pi/180 * angB))**2 - (np.tan(np.pi / 180 * angA) * np.cos(np.pi / 180 * angB))**2
+  b = -(2 * side_length) + (2 * side_length * np.cos(np.pi / 180 * angB)**2)
+  c = side_length**2 - (side_length * np.cos(np.pi / 180 * angB))**2
+  if angA > 90 or angB > 90:
+    A = (-b + math.sqrt(b**2 - 4*a*c))/ (2 * a)
+  else:
+    A = (-b - math.sqrt(b**2 - 4*a*c))/ (2 * a)
+  B = A * np.tan(np.pi / 180 * angA)
+  return np.array([A, B])
+
 dvec = np.array([-1,1]) 
 #Orthogonal matrix
 omat = np.array([[0,1],[-1,0]]) 

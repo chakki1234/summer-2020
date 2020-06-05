@@ -1,0 +1,108 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+
+\begin{figure}[!ht]
+\centering
+\resizebox{\columnwidth}{!}{\input{./figs/cyclic_quad_fig}}
+\caption{Cyclic quadilateral by Latex-Tikz}
+\label{fig:cyclic_quad}	
+\end{figure}
+
+\item The figure obtained looks like Fig. \ref{fig:cyclic_quad}.\\ 
+
+\item The design parameters used for construction See Table. \ref{table:table1}.
+\begin{table}[ht!]
+\centering
+\input{./tables/design_params}
+\caption{Quadilateral $ABCD$}
+\label{table:table1}	
+\end{table} 
+
+\item Coordinates of cyclic quadilateral Fig\ref{fig:cyclic_quad}. \\
+\begin{align}
+\vec{A} &=\myvec{0\\0} \label{eq:constr_a}\\
+\vec{B} &=\myvec{a\\0} \label{eq:constr_b}\\
+\vec{C} &=\myvec{x\\y} \label{eq:constr_c}\\
+\vec{D} &= \myvec{b\cos{\theta}\\b\sin{\theta}}\label{eq:constr_d}
+\end{align}
+
+\item To find the coordinates of $\vec{C}$. \\
+\textbf{Property:} $\angle{ADB} = \angle{BCA}$ since $ABCD$ is a cyclic quadilateral.
+\begin{align}
+\cos{\gamma} &= \frac{\brak{A-D}^T\brak{B-D}}{\| A -D \| \ \|B-D\|} \\
+\theta &= 180\degree - \gamma - \angle B
+\end{align}
+
+In $\triangle ACB$. Finding the Scalar Products:
+\begin{align}
+\begin{split}\label{eq:scalar1}
+\brak{\vec{B} - \vec{A}}^T\brak{\vec{C}-\vec{A}} &= \\ \|\vec{B} - \vec{A}\|
+\ \| \vec{C}-\vec{A} \| \cos{\theta}
+\end{split}\\ \nonumber\\
+\begin{split}\label{eq:scalar2}
+\brak{\vec{C} - \vec{B}}^T\brak{\vec{A}-\vec{B}} &= \\ 
+\|\vec{C} - \vec{B}\|\ \| \vec{A}-\vec{B} \| \cos{\alpha}
+\end{split}
+\end{align}
+
+On simplifying equation \ref{eq:scalar1} and \ref{eq:scalar2}:
+\begin{align}
+x^2 \tan{\theta}^2 &= y^2 \label{eq:scalar3}\\
+\brak{x - a}^2 &= \brak{\brak{x-a}^2 + y^2}\cos{\alpha}^2\label{eq:scalar4}
+\end{align}
+Substituting \ref{eq:scalar3} in \ref{eq:scalar4}:
+\begin{align}
+\begin{split}\label{eq:scalar5}
+x^2\brak{1-\cos{\alpha}^2-\tan{\theta}^2\cos{\alpha}^2}\\
++ x\brak{2a\cos{\alpha}^2-2a} + a^2\sin{\alpha}^2
+\end{split}
+\end{align}\\
+
+If $\theta$ and $\alpha$ are accute angles:
+\begin{align}
+x &= \frac{\brak{-b-\sqrt{b^2-4ac}}}{2a}
+\end{align}
+else:
+\begin{align}
+x &= \frac{\brak{-b+\sqrt{b^2-4ac}}}{2a}
+\end{align}\\
+
+The value of $x$ can then be substituted in \ref{eq:scalar3} to find the coordinates of $\vec{C}$\\ 
+
+\item
+From the given information, 
+The values are listed in \ref{table:table2}\\
+\begin{table}[ht!]
+\centering
+\input{./tables/result}
+\caption{Values of $\vec{C}$ and $\vec{D}$}
+\label{table:table2}	
+\end{table} 
+
+\item Draw Fig. \ref{fig:cyclic_quad2}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./figs/cyclic_quad.eps}
+\caption{Triangle generated using python}
+\label{fig:cyclic_quad2}
+\end{figure} 
+
+\solution The  following Python code generates Fig. \ref{fig:cyclic_quad2}
+
+\begin{lstlisting}
+codes/cyclic_quad.py
+\end{lstlisting}
+
+and the equivalent latex-tikz code generating Fig. \ref{fig:cyclic_quad2} is 
+\begin{lstlisting}
+figs/cyclic_quad_fig.tex
+\end{lstlisting}
+%
+The above latex code can be compiled as a standalone document as
+\begin{lstlisting}
+figs/cyclic_quad_final.tex
+\end{lstlisting}
+\end{enumerate}
+

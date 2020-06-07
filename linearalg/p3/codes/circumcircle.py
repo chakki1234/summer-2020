@@ -20,7 +20,7 @@ x_BC = line_gen(B, C)
 x_CA = line_gen(C, A)
 
 #plot circle
-circle1 = plt.Circle((O[0], O[1]), np.linalg.norm(A-O), color='b', fill=False, linestyle='dotted')
+circle1 = plt.Circle((O[0], O[1]), np.linalg.norm(A-O), color='b', fill=False)
 
 fig, ax = plt.subplots()
 ax.add_artist(circle1)
@@ -42,8 +42,8 @@ ax.plot(O[0], O[1], 'o')
 ax.legend(loc='best')
 
 # if using termux
-# fig('./figs/circle.eps')
-# fig('./figs/circle.pdf')
-# subprocess.run(shlex.split("termux-open ./figs/cyclic_quad.pdf"))
+# ax.fig('./figs/circumcircle.eps')
+# ax.fig('./figs/circumcircle.pdf')
+# subprocess.run(shlex.split("termux-open ./figs/circumcircle.pdf"))
 # else
-# fig.savefig('./figs/circles.eps')
+fig.savefig('./figs/circumcircle.eps')

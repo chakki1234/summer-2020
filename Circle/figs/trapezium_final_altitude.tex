@@ -13,11 +13,12 @@
 \node (D) at (1.1, 3)[point,label=above left:$D$] {};
 \node (P1) at (1.1, 0)[point,label=below right:$P_1$] {};
 \node (P2) at (3.9, 0)[point,label=below left:$P_2$] {};
+\node (O) at (2.5, 0.79)[point,label=below:$O$]{};
 
 %Drawing quad ABCD
 \draw (A) -- node[below=6pt]{$b$}(B) -- (C) -- (D) -- (A);
 \draw[dotted] (D) -- node[right = 7pt]{$h$}(P1)(P2)--(C);
-
+\draw[dotted] (O) circle(2.62);
 %marking line segment
 \tkzMarkSegments[mark=|,size=6pt](A,D C,B)
 \tkzMarkSegments[mark=s||,size=6pt](P1,D C,P2)

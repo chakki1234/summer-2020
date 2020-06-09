@@ -1,0 +1,20 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+
+\item Draw Fig. \ref{fig:motion_plane}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./figs/motion_plane.eps}
+\caption{Vectorial representation of velocities generated using python}
+\label{fig:motion_plane}
+\end{figure} 
+
+\solution The  following Python code generates Fig. \ref{fig:motion_plane}
+
+\begin{lstlisting}
+codes/motion_plane.py
+\end{lstlisting}
+\end{enumerate}
+

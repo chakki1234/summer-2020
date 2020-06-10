@@ -46,4 +46,4 @@ ax.legend(loc='best')
 # ax.fig('./figs/circumcircle.pdf')
 # subprocess.run(shlex.split("termux-open ./figs/circumcircle.pdf"))
 # else
-fig.savefig('./figs/circumcircle.eps')
+fig.savefig('./figs/circumcircle.png')

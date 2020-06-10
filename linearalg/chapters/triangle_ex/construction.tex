@@ -1,0 +1,105 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+\numberwithin{equation}{enumi}
+
+\begin{figure}[!ht]
+\centering
+\resizebox{\columnwidth}{!}{\input{./figs/triangle_ex/triangle_fig}}
+\caption{Triangle by Latex-Tikz}
+\label{fig:triangle_triangle_ex}	
+\end{figure}
+
+\item The figure obtained looks like Fig. \ref{fig:triangle_triangle_ex}.\\ 
+
+\item The design parameters used for construction See Table. \ref{table:table1_triangle_ex}.
+\begin{table}[ht!]
+\centering
+\input{./tables/triangle_ex/design_params}
+\caption{Triangle $ABC$}
+\label{table:table1_triangle_ex}	
+\end{table} 
+
+\item To find the coordinates of $\vec{C}$ in Fig \ref{fig:triangle_triangle_ex}\\
+\solution
+\begin{align}
+\vec{A} &=\myvec{0\\0} \label{eq:constr_a_triangle_ex}\\
+\vec{B} &=\myvec{b\\0} \label{eq:constr_b_triangle_ex}\\
+\vec{C} &=\myvec{x\\y} \label{eq:constr_c_triangle_ex}
+%\vec{B} - \vec{A} &= \myvec{a\\0}\\
+%\vec{C} - \vec{A} &= \myvec{x\\y}\\
+%\vec{C} - \vec{B} &= \myvec{x - a\\y}\\
+%\vec{A} - \vec{B} &= \myvec{-a\\0} 
+\end{align}
+
+Finding the Scalar Products:
+\begin{align}
+\begin{split}\label{eq:scalar1_triangle_ex}
+\brak{\vec{B} - \vec{A}}^T\brak{\vec{C}-\vec{A}} &= \\ \|\vec{B} - \vec{A}\|
+\ \| \vec{C}-\vec{A} \| \cos{\theta}
+\end{split}\\ \nonumber\\
+\begin{split}\label{eq:scalar2_triangle_ex}
+\brak{\vec{C} - \vec{B}}^T\brak{\vec{A}-\vec{B}} &= \\ 
+\|\vec{C} - \vec{B}\|\ \| \vec{A}-\vec{B} \| \cos{\alpha}
+\end{split}
+\end{align}
+
+On simplifying equation \ref{eq:scalar1_triangle_ex} and \ref{eq:scalar2_triangle_ex}:
+\begin{align}
+x^2 \tan{\theta}^2 &= y^2 \label{eq:scalar3_triangle_ex}\\
+\brak{x - a}^2 &= \brak{\brak{x-a}^2 + y^2}\cos{\alpha}^2\label{eq:scalar4_triangle_ex}
+\end{align}
+Substituting \ref{eq:scalar3_triangle_ex} in \ref{eq:scalar4_triangle_ex}:
+\begin{align}
+\begin{split}\label{eq:scalar5_triangle_ex}
+x^2\brak{1-\cos{\alpha}^2-\tan{\theta}^2\cos{\alpha}^2}\\
++ x\brak{2a\cos{\alpha}^2-2a} + a^2\sin{\alpha}^2
+\end{split}
+\end{align}\\
+
+If $\theta$ and $\alpha$ are accute angles:
+\begin{align}
+x &= \frac{\brak{-b-\sqrt{b^2-4ac}}}{2a}
+\end{align}
+else:
+\begin{align}
+x &= \frac{\brak{-b+\sqrt{b^2-4ac}}}{2a}
+\end{align}\\
+
+The value of $x$ can then be substituted in \ref{eq:scalar3_triangle_ex} to find the coordinates of $\vec{C}$\\ \\
+
+\item
+From the given information, 
+The values are listed in \ref{table:table2_triangle_ex}\\
+\begin{table}[ht!]
+\centering
+\input{./tables/triangle_ex/result}
+\caption{Value of $\vec{C}$}
+\label{table:table2_triangle_ex}	
+\end{table} 
+
+\item Draw Fig. \ref{fig:triangle2_triangle_ex}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./figs/triangle_ex/triangle_linearalg.eps}
+\caption{Triangle generated using python}
+\label{fig:triangle2_triangle_ex}
+\end{figure} 
+
+\solution The  following Python code generates Fig. \ref{fig:triangle2_triangle_ex}
+
+\begin{lstlisting}
+codes/triangle_ex/triangle_linearalg.py
+\end{lstlisting}
+
+and the equivalent latex-tikz code generating Fig. \ref{fig:triangle2_triangle_ex} is 
+\begin{lstlisting}
+figs/triangle_ex/triangle_fig.tex
+\end{lstlisting}
+%
+The above latex code can be compiled as a standalone document as
+\begin{lstlisting}
+figs/triangle_ex/triangle_final.tex
+\end{lstlisting}
+\end{enumerate}
+

@@ -1,0 +1,20 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+\numberwithin{equation}{enumi}
+
+\item Draw Fig. \ref{fig:quadeq_conics_example}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./figs/conics_example/quadratic_equation.eps}
+\caption{$x^2 -2x$ generated using python}
+\label{fig:quadeq_conics_example}
+\end{figure} 
+
+\solution The  following Python code generates Fig. \ref{fig:quadeq_conics_example}
+
+\begin{lstlisting}
+codes/conics_example/conics.py
+\end{lstlisting}
+\end{enumerate}
+

@@ -1,0 +1,70 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+\numberwithin{equation}{enumi}
+
+\begin{figure}[!ht]
+\centering
+\resizebox{\columnwidth}{!}{\input{./figs/circle_examp/circle_fig}}
+\caption{Circle by Latex-Tikz}
+\label{fig:circle_circle_examp}	
+\end{figure}
+
+\item The figure obtained looks like Fig. \ref{fig:circle_circle_examp}.\\ 
+
+\item The general of a circle equation is $Ax^2 + Bxy + Ay^2 + Dx + Ey + F$, the equation can be represented as follow in the vector form:
+\begin{align}
+x^T 
+\begin{pmatrix}
+A & \frac{B}{2} \\
+\frac{B}{2} & A
+\end{pmatrix}
+x + 
+\begin{pmatrix}
+D & E 
+\end{pmatrix}
+x + F = 0
+\end{align}
+To find the center - $\vec{O}$ and radius - $r$ of a circle:
+\begin{align}
+\vec{O} &= \frac{-1}{2A}\begin{pmatrix}
+D & E 
+\end{pmatrix}\label{eq:circle_example}\\
+r &= \frac{1}{A}\sqrt{ \frac{1}{4} \| \myvec{D\\ E}\ \|^2 - F^2}\label{eq:circle_example2}
+\end{align}
+
+\item
+From the given information, 
+The values are listed in \ref{table:table_circle_examp}\\
+\begin{table}[ht!]
+\centering
+\input{./tables/circle_examp/result}
+\caption{Value of $\vec{O}$ and $r$}
+\label{table:table_circle_examp}	
+\end{table} 
+
+\item Draw Fig. \ref{fig:circle2_circle_examp}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./figs/circle_examp/circle.eps}
+\caption{Circle generated using python}
+\label{fig:circle2_circle_examp}
+\end{figure} 
+
+\solution The  following Python code generates Fig. \ref{fig:circle2_circle_examp}
+
+\begin{lstlisting}
+codes/circle_exam.py
+\end{lstlisting}
+
+and the equivalent latex-tikz code generating Fig. \ref{fig:circle2_circle_examp} is 
+\begin{lstlisting}
+figs/circle_fig.tex
+\end{lstlisting}
+%
+The above latex code can be compiled as a standalone document as
+\begin{lstlisting}
+figs/circle_fig_final.tex
+\end{lstlisting}
+\end{enumerate}
+

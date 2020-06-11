@@ -21,7 +21,10 @@
 \item To find the coordinates of $\vec{O}$. \\
 \solution A circle passing through three non-collinear points is the circumcircle and the center is the circumcenter.\\
 \begin{align}
-\vec{O} &= \frac{A\sin{\angle 2A} + B\sin{\angle 2B} + C\sin{\angle 2C}}{\sin{\angle 2A} + \sin{\angle 2B} + \sin{\angle 2C}}
+\vec{O} &= \frac{A\sin{\angle 2A} + B\sin{\angle 2B} + C\sin{\angle 2C}}{\sin{\angle 2A} + \sin{\angle 2B} + \sin{\angle 2C}}\\
+\cos{\angle A} &= \frac{ \brak{\vec{C}-\vec{A}}^T \brak{\vec{B}-\vec{A}}}{\| \vec{C}-\vec{A} \|\ \| \vec{B}-\vec{A} \|} \\
+\cos{\angle B} &= \frac{ \brak{\vec{A}-\vec{B}}^T \brak{\vec{C}-\vec{B}}}{\| \vec{A}-\vec{B} \|\ \| \vec{C}-\vec{B} \|} \\
+\cos{\angle C} &= \frac{ \brak{\vec{A}-\vec{C}}^T \brak{\vec{B}-\vec{C}}}{\| \vec{A}-\vec{C} \|\ \| \vec{B}-\vec{C} \|} 
 \end{align}
 
 \item
@@ -34,7 +37,7 @@ The values are listed in \ref{table:table2_circle_ex}\\
 \label{table:table2_circle_ex}	
 \end{table} 
 
-\pagebreak
+%\pagebreak
 \item Draw Fig. \ref{fig:Circumcircle2_circle_ex}.
 
 \begin{figure}[!ht]

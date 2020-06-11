@@ -2,7 +2,13 @@
 \begin{align}
 \vec{O} &= \frac{A\sin{\angle 2A} + B\sin{\angle 2B} + C\sin{\angle 2C}}{\sin{\angle 2A} + \sin{\angle 2B} + \sin{\angle 2C}}
 \end{align}\\
-Substituting values from \ref{eq:constr_a_circle_ex}, \ref{eq:constr_b_circle_ex} and \ref{eq:constr_c_circle_ex}
+To find the angles:
+\begin{align}
+\cos{\angle A} &= \frac{ \brak{\vec{C}-\vec{A}}^T \brak{\vec{B}-\vec{A}}}{\| \vec{C}-\vec{A} \|\ \| \vec{B}-\vec{A} \|} \\
+\cos{\angle B} &= \frac{ \brak{\vec{A}-\vec{B}}^T \brak{\vec{C}-\vec{B}}}{\| \vec{A}-\vec{B} \|\ \| \vec{C}-\vec{B} \|} \\
+\cos{\angle C} &= \frac{ \brak{\vec{A}-\vec{C}}^T \brak{\vec{B}-\vec{C}}}{\| \vec{A}-\vec{C} \|\ \| \vec{B}-\vec{C} \|} 
+\end{align}
+Substituting the give values:
 \begin{align}
 \therefore \vec{O} &= \myvec{3\\-2}
 \end{align}

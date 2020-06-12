@@ -1,16 +1,22 @@
-\begin{flushleft}
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item \begin{flushleft}
 Determinant of a $2 x 2 $ matrix is obtained as follows
 \end{flushleft}
-\begin{align}
+
+\item \begin{align}
 A &= \begin{vmatrix} \nonumber
 a_{11}& a_{12}\\
 a_{21}& a_{22}
 \end{vmatrix}\\
 detA &= a_{11}a_{22}-a_{12}a_{21}\label{eq:mat_determinants}
 \end{align}
-From \ref{eq:mat_determinants}:
+\item From \ref{eq:mat_determinants}:
 \begin{align}
 (i)\ det &= \cos{\theta}^2 + \sin{\theta}^2 = 1 \\
 (ii)\  det &= x^3 - x^2 + 2
 \end{align}
+\end{enumerate}
 

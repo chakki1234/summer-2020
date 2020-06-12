@@ -1,11 +1,15 @@
-\begin{align}
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item \begin{align}
 7x+3\ &<\ 5x+9 \\
 2x - 6\  &< \  0 \\
 x &< 3 \\
 \therefore\  x\  &\epsilon\  \{3, -\infty \}
 \end{align}
 
-\begin{figure}[!ht]
+\item \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/line_ex/lin_ineq/number_line.eps}
 \caption{Values of $x$ satisfying the inequality in the number line generated using python}
@@ -16,6 +20,7 @@ The  following Python code generates Fig. \ref{fig:numberline_lin_ineq}
 \begin{lstlisting}
 codes/line_ex/lin_ineq/dist_btw_pts.py
 \end{lstlisting}
+\end{enumerate}
 
 
 

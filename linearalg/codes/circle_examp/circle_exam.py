@@ -34,12 +34,11 @@ ax.text(O[0] * (1 - 0.7), O[1] * (1 - 0.2), '$r$')
 ax.plot(O[0], O[1], 'o')
 
 ax.set_aspect('equal', adjustable='datalim')
-ax.set_xlim((-20, 20))
-ax.set_ylim((-20, 20))
+ax.set_xlim((-15, 5))
 
 # if using termux
 # ax.fig('./figs/circle.eps')
 # ax.fig('./figs/circle.pdf')
 # subprocess.run(shlex.split("termux-open ./figs/circle.pdf"))
 # else
-fig.savefig('./figs/circle.eps')
+fig.savefig('circle.eps')

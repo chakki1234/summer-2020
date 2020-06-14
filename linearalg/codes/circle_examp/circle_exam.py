@@ -41,4 +41,4 @@ ax.set_xlim((-15, 5))
 # ax.fig('./figs/circle.pdf')
 # subprocess.run(shlex.split("termux-open ./figs/circle.pdf"))
 # else
-fig.savefig('circle.eps')
+fig.savefig('circle.png')

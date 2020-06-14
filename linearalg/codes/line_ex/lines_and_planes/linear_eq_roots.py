@@ -6,15 +6,6 @@ from coeffs import *
 import subprocess
 import shlex
 
-import numpy as np
-import matplotlib.pyplot as plt
-from coeffs import *
-
-#if using termux
-import subprocess
-import shlex
-
-
 # equation - x+5
 X_coord1 = np.array(np.linspace(-10.0, 0.0, num=40))
 Y_coord1 =  [num + 5 for num in X_coord1]
@@ -41,7 +32,7 @@ Y_coord5 =  [3*num for num in X_coord5]
 plt.figure(1)
 plt.plot(X_coord1, Y_coord1, label='$x + 5$')
 plt.plot(finding_roots_linear(1, 5), 0, 'o')
-plt.text(finding_roots_linear(1, 5), -1, 'A')
+plt.text(finding_roots_linear(1, 5), -1, '$x_1$')
 plt.axis('equal')
 plt.legend(loc='best')
 plt.grid()
@@ -51,7 +42,7 @@ plt.grid()
 plt.figure(2)
 plt.plot(X_coord2, Y_coord2, label='$x - 5$')
 plt.plot(finding_roots_linear(1, -5), 0, 'o')
-plt.text(finding_roots_linear(1, -5), -1, 'A')
+plt.text(finding_roots_linear(1, -5), -1, '$x_1$')
 plt.axis('equal')
 plt.legend(loc='best')
 plt.grid()
@@ -60,7 +51,7 @@ plt.grid()
 plt.figure(3)
 plt.plot(X_coord3, Y_coord3, label='$2x + 5$')
 plt.plot(finding_roots_linear(2, 5), 0, 'o')
-plt.text(finding_roots_linear(2, 5), -1, 'A')
+plt.text(finding_roots_linear(2, 5), -1, '$x_1$')
 plt.axis('equal')
 plt.legend(loc='best')
 plt.grid()
@@ -69,7 +60,7 @@ plt.grid()
 plt.figure(4)
 plt.plot(X_coord4, Y_coord4, label='$3x - 2$')
 plt.plot(finding_roots_linear(3, -2), 0, 'o')
-plt.text(finding_roots_linear(3, -2), -1, 'A')
+plt.text(finding_roots_linear(3, -2), -1, '$x_1$')
 plt.axis('equal')
 plt.legend(loc='best')
 plt.grid()
@@ -78,7 +69,7 @@ plt.grid()
 plt.figure(5)
 plt.plot(X_coord5, Y_coord5, label='$3x$')
 plt.plot(finding_roots_linear(3, 0), 0, 'o')
-plt.text(finding_roots_linear(3, 0), -1, 'A')
+plt.text(finding_roots_linear(3, 0), -1, '$x_1$')
 plt.axis('equal')
 plt.legend(loc='best')
 plt.grid()
@@ -89,4 +80,4 @@ plt.grid()
 # plt.savefig('./figs/eq.eps')
 # subprocess.run(shlex.split("termux-open ./figs/eq.pdf"))
 # else
-# plt.show()
+plt.show()

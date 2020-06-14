@@ -15,11 +15,31 @@ Sum of opposite angles in a cyclic quadilateral equals $180\degree$.
 
 \item From the given information:
 \begin{align}
-4y+20-4x &= 180\degree \label{eq:sol1_quadilateral_ex} \\
-3y-5-7x+5 &= 180\degree \label{eq:sol2_quadilateral_ex}
+\myvec{
+-4 & 4 \\
+-7 & 3 
+}\vec{x} &= \myvec{160\\180}
 \end{align}
 
-\item Solving equations \ref{eq:sol1_quadilateral_ex} and \ref{eq:sol2_quadilateral_ex}:
+To find the angles:
+\begin{align}
+\myvec{-4 & 4 & 160 \\
+-7 & 3 & 180}
+&\xleftrightarrow[]{R_1 \leftarrow \frac{-R_1}{4}}
+\myvec{1 & -1 & -40 \\
+-7 & 3 & 180} \\
+&\xleftrightarrow[]{R_2 \leftarrow R_2 + 7R_1}
+\myvec{1 & -1 & -40 \\
+0 & -4 & -100} \\
+&\xleftrightarrow[]{R_2 \leftarrow \frac{-R_2}{4}}
+\myvec{1 & -1 & -40 \\
+0 & 1 & 25} \\
+&\xleftrightarrow[]{R_1 \leftarrow \ R_1+R_2}
+\myvec{1 & 0 & -15 \\
+0 & 1 & 25} 
+\end{align}
+
+\item 
 \begin{align}
 x &= -15 \\
 y &= 25 \\
@@ -28,7 +48,6 @@ y &= 25 \\
 \implies \angle C &= 60\degree \\
 \implies \angle D &= 110\degree 
 \end{align}
-
 
 \item \begin{figure}[!ht]
 \centering
@@ -43,6 +62,6 @@ The following Python code generates Fig. \ref{fig:cyclic_quad2_quadilateral_ex}
 codes/quadilateral_ex/cyclic_quad.py
 \end{lstlisting}
 \end{enumerate}
-
+\newpage
 
 

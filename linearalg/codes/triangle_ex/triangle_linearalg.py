@@ -6,12 +6,20 @@ from coeffs import *
 import subprocess
 import shlex
 
-#From the information given 
-angC = 2*180/3
-angA = angC/6
-angB = angC/3
+# angA = 20
+# angB = 40
+# angC = 120
 
-#sides
+#From the information given 
+p = np.array([[6, 0, -1], [0, 3, -1], [1, 1, 1]])
+q = np.array([0, 0, 180])
+result = np.linalg.inv(p).dot(q)
+
+angA, angB, angC = result
+
+print(result)
+
+# #sides
 a = 10
 
 #Quad vertices

@@ -12,11 +12,21 @@ import shlex
 # 3y-7x=180
 # x = -15
 # y = 25
+# angA = 120
+# angB = 70
+# angC = 60
+# angD = 110
 
-angA = 120
-angB = 70
-angC = 60
-angD = 110
+#From the information given 
+p = np.array([[-4, 4], [-7, 3]])
+q = np.array([160, 180])
+result = np.linalg.inv(p).dot(q)
+print(result)
+
+angA = 4 * result[1] + 20
+angB = 3 * result[1] - 5
+angC = -4 * result[0] 
+angD = -7 * result[0] + 5
 
 #sides
 a = 10

@@ -2,26 +2,26 @@
 \begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
 \numberwithin{equation}{enumi}
 
-\item \solution The general of a circle equation is $Ax^2 + Bxy + Ay^2 + Dx + Ey + F$, the equation can be represented as follow in the vector form:
+\item The general of a circle equation is $Ax^2 + Ay^2 + Dx + Ey + F$, the equation can be represented as follow in the vector form:
 \begin{align}
-x^T 
-\begin{pmatrix}
-A & \frac{B}{2} \\
-\frac{B}{2} & A
-\end{pmatrix}
-x + 
-\begin{pmatrix}
+\vec{x}^T 
+\myvec{
+A & 0 \\
+0 & A
+}
+\vec{x} + 
+\myvec{
 D & E 
-\end{pmatrix}
-x + F = 0
+}
+\vec{x} + F = 0
 \end{align}
 
 \item To find the center - $\vec{O}$ and radius - $r$ of a circle:
 \begin{align}
-\vec{O} &= \frac{-1}{2A}\begin{pmatrix}
-D & E 
-\end{pmatrix}\label{eq:circle_example3}\\
-r &= \frac{1}{A}\sqrt{ \frac{1}{4} \| \myvec{D\\ E}\ \|^2 - F^2}\label{eq:circle_example4}
+\vec{O} &= \frac{-1}{2A}\myvec{
+D \\ E 
+}\label{eq:circle_example3}\\
+r &= \frac{1}{A}\sqrt{ \frac{1}{4} \norm{ \myvec{D\\ E} }^2 - F^2}\label{eq:circle_example4}
 \end{align}
 
 \item The values given:

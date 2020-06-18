@@ -31,7 +31,7 @@ plt.text(A[0] * (1 + 0.04), A[1] * (1 + 0.02), 'A')
 plt.plot(B[0], B[1], 'o')
 plt.text(B[0] * (1 + 0.1), B[1], 'B')
 plt.plot(O[0], O[1], 'o')
-plt.text(0.4, O[1], 'O')
+plt.text(1, O[1], 'O')
 plt.plot(C[0], C[1], 'o')
 plt.text(C[0] * (1 + 0.1), C[1], 'C')
 

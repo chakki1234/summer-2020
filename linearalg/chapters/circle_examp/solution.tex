@@ -2,41 +2,21 @@
 \begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
 \numberwithin{equation}{enumi}
 
-\item The general of a circle equation is $Ax^2 + Ay^2 + Dx + Ey + F$, the equation can be represented as follow in the vector form:
+\item The general of a circle equation is $\norm{\vec{x}-\vec{O}} = r$.
 \begin{align}
-\vec{x}^T 
-\myvec{
-A & 0 \\
-0 & A
-}
-\vec{x} + 
-\myvec{
-D & E 
-}
-\vec{x} + F = 0
+\norm{\vec{x}-\vec{O}}^2 &= r^2 \\
+\implies \brak{\vec{x}-\vec{O}}^T\brak{\vec{x}-\vec{O}} &= r^2 \\
+\implies \vec{x}^T\vec{x} - 2\vec{O}^T\vec{x} + \vec{O}^T\vec{O} - r^2  &= 0\\
+\implies \vec{x}^T\vec{x} - 2\vec{O}^T\vec{x} + \norm{\vec{O}}^2 - r^2  &= 0 \label{eq:converted_circle_examp}
 \end{align}
 
-\item To find the center - $\vec{O}$ and radius - $r$ of a circle:
-\begin{align}
-\vec{O} &= \frac{-1}{2A}\myvec{
-D \\ E 
-}\label{eq:circle_example3}\\
-r &= \frac{1}{A}\sqrt{ \frac{1}{4} \norm{ \myvec{D\\ E} }^2 - F^2}\label{eq:circle_example4}
-\end{align}
-
-\item The values given:
-\begin{align}
-A &= 1\\
-D &= 8 \\
-E &= 10 \\
-F &= -8
-\end{align}
-
-\item Substituting the values in equation \ref{eq:circle_example3} and \ref{eq:circle_example4}:
+Comparing equation \eqref{eq:converted_circle_examp} with the given circle equation:
 \begin{align}
 \vec{O} &= \myvec{-4\\-5}\\
-r &= 7
-\end{align} 
+\norm{\vec{O}}^2 &= 41 \\
+r^2 &= 41 + 8 \\
+\therefore r &= 7
+\end{align}
 
 \item 
 \begin{figure}[!ht]

@@ -23,6 +23,7 @@ circle1 = plt.Circle((O[0], O[1]), r, color='b', fill=False)
 x_OD = line_gen(O, D)
 
 fig, ax = plt.subplots()
+ax.grid()
 
 #Plotting all lines
 ax.plot(x_OD[0,:], x_OD[1,:], linestyle='dotted')
@@ -36,9 +37,10 @@ ax.plot(O[0], O[1], 'o')
 ax.set_aspect('equal', adjustable='datalim')
 ax.set_xlim((-15, 5))
 
+
 # if using termux
 # ax.fig('./figs/circle.eps')
 # ax.fig('./figs/circle.pdf')
 # subprocess.run(shlex.split("termux-open ./figs/circle.pdf"))
 # else
-fig.savefig('circle.png')
+fig.savefig('./figs/circle_examp/circle.eps')

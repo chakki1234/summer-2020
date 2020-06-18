@@ -12,18 +12,19 @@ A = np.array([6, -6])
 B = np.array([3, -7])
 C = np.array([3, 3])
 
-p = np.array([[6, -6, 1], [3, -7, 1], [3, 3, 1]])
-q = np.array([-72, -58, -18])
-result = np.sum(np.linalg.inv(p)*q , axis=1)
-O = -1 * np.array([result[0], result[1]])/2
+p = np.array([[3, 1], [1, -3]])
+q = np.array([7, 9])
+O = np.sum(np.linalg.inv(p)*q , axis=1)
 print(A, B, C, O)
 
 #plot circle
 circle1 = plt.Circle((O[0], O[1]), np.linalg.norm(A-O), color='b', fill=False)
 
 fig, ax = plt.subplots()
+ax.grid()
 ax.add_artist(circle1)
 ax.set_aspect('equal', adjustable='datalim')
+
 
 #plot points and lines
 ax.text(A[0], A[1] * (1 - 0.1), 'A')

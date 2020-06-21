@@ -8,7 +8,7 @@ import shlex
 
 
 #vertices
-theta = -60
+theta = -30
 A = np.array([0, 25])
 B = np.array([10 * np.cos(np.pi / 180 * theta), 10 * np.sin(np.pi / 180 * theta)])
 O = np.array([0, 0])
@@ -33,7 +33,7 @@ plt.text(B[0] * (1 + 0.1), B[1], 'B')
 plt.plot(O[0], O[1], 'o')
 plt.text(1, O[1], 'O')
 plt.plot(C[0], C[1], 'o')
-plt.text(C[0] * (1 + 0.1), C[1], 'C')
+plt.text(C[0] * (1 + 0.1), C[1] * (1 - 0.07), 'C')
 
 plt.xlabel('$x$')
 plt.ylabel('$y$')
@@ -43,7 +43,7 @@ plt.grid()
 
 # if using termux
 # plt.savefig('./figs/motion_plane.pdf')
-# plt.savefig('./figs/motion_plane.eps')
+plt.savefig('./figs/motion_plane.eps')
 # subprocess.run(shlex.split("termux-open ./figs/motion_plane"))
 # else
 plt.show()

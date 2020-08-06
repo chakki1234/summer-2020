@@ -1,0 +1,41 @@
+\renewcommand{\theequation}{\theenumi}
+
+\begin{theorem}
+Two events A and B are said to be independent if $P\brak{A \cap B} = P\brak{A}.P\brak{B}$.
+\end{theorem}
+
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item P(A and B) is:
+\begin{align}
+&=P\brak{A \cap B}\\
+&=P\brak{A}.P\brak{B}\\
+&= 0.18
+\end{align}
+
+\item P(A and not B) is:
+\begin{align}
+&=P\brak{A} - P\brak{A \cap B} \\
+&= 0.12
+\end{align}
+
+\item P(A or B) $=P\brak{A \cup B}$:
+\begin{align}
+P\brak{A \cup B} &= P\brak{A} + P\brak{B} - P\brak{A \cap B}\\
+P\brak{A \cup B} &= 0.72
+\end{align}\\
+
+\item P(neither A nor B) $=P\brak{A \cup B}'$:
+\begin{align}
+&= 1 - 0.72\\ 
+&= 0.28
+\end{align}
+
+The python implementation:
+\begin{lstlisting}
+codes/excercise_prob/prob39.py
+\end{lstlisting}
+
+
+\end{enumerate}

@@ -1,0 +1,39 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item 
+\begin{align*}
+S_1 : man\ speaks\ the\ truth \\
+S_2: man\ lies \\
+E: six\ on\ the\ die
+\end{align*}
+
+
+\item 
+\begin{align*}
+P\brak{S_1} = \frac{3}{4}\\
+P\brak{S_2} = 1 - \frac{3}{4} =  \frac{1}{4} \\
+P\brak{E|S_1} = \frac{1}{6}\\
+P\brak{E|S_2} = 1 - \frac{1}{6} =  \frac{5}{6} \\
+\end{align*}
+
+\item Applying Baye's theorem, we get the required probability as 
+
+\begin{small}
+\begin{align*}
+P\brak{S_1|E} &= \frac{P\brak{S_1}.P\brak{E|S_1}}{ P\brak{S_1}.P\brak{E|S_1} + P\brak{S_2}.P\brak{E|S_2} } 
+\end{align*}
+\end{small}
+
+\begin{align*}
+&= \frac{\frac{1}{6} \times \frac{3}{4}}{\frac{1}{6} \times \frac{3}{4} + \frac{5}{6} \times \frac{1}{4}}\\
+&=\frac{3}{8}
+\end{align*}
+
+The python implementation:
+\begin{lstlisting}
+codes/example_prob/prob31.py
+\end{lstlisting}
+
+\end{enumerate}

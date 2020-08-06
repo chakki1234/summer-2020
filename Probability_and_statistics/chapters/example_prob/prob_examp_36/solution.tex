@@ -1,0 +1,45 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item Since X is a random variable, its Sum of probabilities is equal to 1. $\sum^4_0 P\brak{x} = 1$.
+
+\item If we draw the two balls one after the other the sample space is:
+\begin{align}
+\begin{split}
+P\brak{X=0} &+ P\brak{X=1} + P\brak{X=2} \\
++ P\brak{X=3} &+ P\brak{X=4} = 1
+\end{split}\\
+0.1 + k + 2k + 2k + k &= 1 \\
+6k &= 1 - 0.1\\
+6k &= 0.9 \\
+k &= \frac{0.9}{6}\\
+k &= 0.15
+\end{align}
+
+\item $P\brak{X \geq 2}$:
+\begin{align}
+&= P\brak{X=2} + P\brak{X=3} + P\brak{X=4}\\
+&= 2k + 2k + k \\
+&= 0.75
+\end{align}
+
+\item $P\brak{X=2}$:
+\begin{align}
+&= 2k \\
+&= 0.3
+\end{align}
+
+\item $P\brak{X \leq 2}$:
+\begin{align}
+&= P\brak{X=0} + P\brak{X=1} + P\brak{X=2}\\
+&= 0.1 + 2k + k \\
+&= 0.55
+\end{align}
+
+The python implementation:
+\begin{lstlisting}
+codes/example_prob/prob36.py
+\end{lstlisting}
+
+\end{enumerate}

@@ -1,0 +1,31 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item Let the number of aces  be a random variable. Let it it be denoted by X. Let $T_{1}$ be a event of not getting an ace and $T_{2}$ be a event of getting an ace. 
+
+\item 
+\begin{align*}
+P\brak{X=0} &= P\brak{T_{1}} \times P\brak{T_{1}} \\
+&= \frac{48}{52} \times \frac{48}{52} = \frac{144}{169} \\ 
+P\brak{X=1} &=  P\brak{T_{2}} \times  P\brak{T_{1}} + P\brak{T_{1}} \times P\brak{T_{2}} \\
+&= \frac{24}{169} \\
+P\brak{X=2} &= P\brak{T_{2}} \times P\brak{T_{2}} \\
+&= \frac{4}{52} \times \frac{4}{52}\\
+&= \frac{1}{169}\\
+\end{align*}
+
+\item The probability distribution of $X$ \\
+\begin{table}[ht!]
+\centering
+\input{./tables/prob_examp_34/prob_distribution}
+\caption{The probability distribution of $X$}
+\end{table} 
+ 
+
+The python implementation:
+\begin{lstlisting}
+codes/example_prob/prob31.py
+\end{lstlisting}
+
+\end{enumerate}

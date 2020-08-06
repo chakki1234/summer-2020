@@ -1,0 +1,88 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item The sample space is:
+\begin{align}
+\begin{bmatrix}
+\brak{HHH} & \brak{HHT} & \brak{HTH} & \brak{THH} \\ 
+\brak{TTH} & \brak{THT} & \brak{HTT} & \brak{TTT}
+\end{bmatrix}
+\end{align}
+
+\item Let X be the amount gain or lost by a person. To calculate values of X for different outcomes.
+
+\begin{enumerate}
+\item For HHH:
+\item
+\begin{align}
+2+2+2 = 6
+\end{align}
+\end{enumerate}
+
+\begin{enumerate}
+\item For HHT:
+\item
+\begin{align}
+2+2-1.5 = 2.5
+\end{align}
+\end{enumerate}
+
+\begin{enumerate}
+\item For HTH:
+\item
+\begin{align}
+2-1.5+2 = 2.5
+\end{align}
+\end{enumerate}
+
+\begin{enumerate}
+\item For THH:
+\item
+\begin{align}
+-1.5+2+2 = 2.5
+\end{align}
+\end{enumerate}
+
+\begin{enumerate}
+\item For TTH:
+\item
+\begin{align}
+-1.5-1.5+2 =-1
+\end{align}
+\end{enumerate}
+
+\begin{enumerate}
+\item For THT:
+\item
+\begin{align}
+-1.5+2-1.5 = -1
+\end{align}
+\end{enumerate}
+
+\begin{enumerate}
+\item For HTT:
+\item
+\begin{align}
+2-1.5-1.5 = 6
+\end{align}
+\end{enumerate}
+
+\begin{enumerate}
+\item For TTT:
+\item
+\begin{align}
+-1.5-1.5-1.5 = -4.5
+\end{align}
+\end{enumerate}
+
+\item The values of X can be 6, 2.5, -1, -4.5. Hence X = $\brak{6, 2.5, -1, -4.5}$
+
+\item Thus  X is a real valued function whose domain is sample space. Hence X, is a random variable.
+
+The python implementation:
+\begin{lstlisting}
+codes/example_prob/prob31.py
+\end{lstlisting}
+
+\end{enumerate}

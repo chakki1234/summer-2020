@@ -1,0 +1,40 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item Let X denote the number of doublets. Possible doublets are $\brak{1, 1}, \brak{2, 2}, \brak{3, 3}, \brak{4, 4}, \brak{5, 5}, \brak{6, 6}$. As the dice is thrown thrice, therefore X can take the value $0, 1, 2 \ or \ 3$. 
+
+\item
+\begin{align}
+Probability\  of\  getting\  a\  doublet  &=  \frac{1}{6}\\
+Probability\  of\  not\  getting\  a\  doublet  &=  \frac{5}{6}
+%\begin{bmatrix}
+%\brak{W_{1}, W_{1}} & \brak{W_{2}, W_{2}} & \brak{W_{1}, W_{2}} & \brak{W_{2}, W_{1}} \\ 
+%\brak{r, W_{1}} & \brak{W_{1}, r} & \brak{r, W_{2}} & \brak{W_{2}, r} \\
+%\brak{r, r}
+%\end{bmatrix}
+\end{align}
+
+\begin{align*}
+P\brak{X=0} &= \frac{5}{6} \times \frac{5}{6} \times \frac{5}{6} = \frac{125}{216}\\
+P\brak{X=1} &= \frac{1}{6} \times \frac{5}{6} \times \frac{5}{6} + \frac{5}{6} \times \frac{1}{6} \times \frac{5}{6} + \frac{5}{6} \times \frac{5}{6} \times \frac{1}{6}\\
+&= \frac{75}{216}\\
+P\brak{X=2} &= \frac{1}{6} \times \frac{1}{6} \times \frac{5}{6} + \frac{1}{6} \times \frac{5}{6} \times \frac{1}{6} + \frac{5}{6} \times \frac{1}{6} \times \frac{1}{6}\\
+&= \frac{15}{216}\\
+P\brak{X=3} &= \frac{1}{6} \times \frac{1}{6} \times \frac{1}{6} = \frac{1}{216}
+\end{align*}
+
+\item The probability distribution of $X$ \\
+\begin{table}[ht!]
+\centering
+\input{./tables/prob_examp_35/prob_distribution}
+\caption{The probability distribution of $X$}
+\end{table} 
+
+
+The python implementation:
+\begin{lstlisting}
+codes/example_prob/prob35.py
+\end{lstlisting}
+
+\end{enumerate}

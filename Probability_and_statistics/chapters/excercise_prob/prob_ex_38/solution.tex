@@ -1,0 +1,32 @@
+\renewcommand{\theequation}{\theenumi}
+
+\begin{theorem}
+Two events A and B are said to \\
+be independent if $P\brak{A \cap B} = P\brak{A}.P\brak{B}$.
+\end{theorem}
+
+
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item P(not A or not B) $=P\brak{A \cap B}'$:
+\begin{align*}
+P\brak{A \cap B} &= 1 - \frac{1}{4}\\
+P\brak{A \cap B} &= \frac{3}{4}\\
+\end{align*}
+
+\item $P\brak{A}.P\brak{B}$:
+\begin{align*}
+&=\frac{1}{2} \times \frac{7}{12}\\
+&= \frac{7}{24}
+\end{align*}
+
+\item Since $P\brak{A \cap B}$ is not equal to $P\brak{A}.P\brak{B}$. Therefore A and B are not independent events.
+
+The python implementation:
+\begin{lstlisting}
+codes/excercise_prob/prob38.py
+\end{lstlisting}
+
+
+\end{enumerate}

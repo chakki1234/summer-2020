@@ -1,0 +1,57 @@
+\renewcommand{\theequation}{\theenumi}
+
+\begin{theorem}
+Two events A and B are said to be independent if $P\brak{A \cap B} = P\brak{A}.P\brak{B}$.
+\end{theorem}
+
+
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item The Sample Space is:
+\begin{align}
+\begin{bmatrix}
+\brak{H, 1} & \brak{H, 2} & \brak{H, 3} & \brak{H, 4} & \brak{H, 5} & \brak{H, 6} \\
+\brak{T, 1} & \brak{T, 2} & \brak{T, 3} & \brak{T, 4} & \brak{T, 5} & \brak{T, 6}
+\end{bmatrix}
+\end{align}
+
+\item Probability of event A:\\
+Favourable outcomes are:
+\begin{align}
+&\begin{bmatrix}
+\brak{H, 1} & \brak{H, 2} & \brak{H, 3} & \brak{H, 4} & \brak{H, 5} & \brak{H, 6} 
+\end{bmatrix}\\
+&P\brak{A} = \frac{6}{12} = \frac{1}{2}
+\end{align}
+
+\item Probability of event B:\\
+Favourable outcomes are:
+\begin{align}
+\begin{bmatrix}
+\brak{H, 3} & \brak{T, 3}  
+\end{bmatrix}\\
+P\brak{B} = \frac{2}{12} = \frac{1}{6}
+\end{align}
+
+\item $P\brak{A \cap B}$:
+\begin{align}
+A \cap B &= \brak{H, 3}\\   
+P\brak{A \cap B} &= \frac{1}{12} 
+\end{align}
+
+\item $P\brak{A}.P\brak{B}$:
+\begin{align}
+&=\frac{1}{12} \times \frac{1}{6}\\
+&= \frac{1}{12}
+\end{align}
+
+\item Since $P\brak{A \cap B} = P\brak{A}.P\brak{B}$. Therefore A and B are independent events.
+
+The python implementation:
+\begin{lstlisting}
+codes/excercise_prob/prob32.py
+\end{lstlisting}
+
+
+\end{enumerate}

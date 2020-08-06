@@ -1,0 +1,51 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item Let: 
+\begin{align*}
+T_{1} &: Event\ the\  doctor\  came\  by\  train\\
+T_{2} &: Event\  the\  doctor\  came\  by\  Bus\\
+T_{3} &: Event\  the\  doctor\  came\  by\  Scooter\\
+\begin{split}
+T_{4} &: Event\  the\  doctor\  came\  by\  \\ 
+      &other\  means\  of\  transport
+\end{split}\\ 
+L &: Event\ the\ doctor\ arrives\ late
+\end{align*}
+ 
+\item 
+\begin{align*}
+P\brak{T_{1}} &= \frac{3}{10}\\
+P\brak{T_{2}} &= \frac{1}{5}\\
+P\brak{T_{3}} &= \frac{1}{10}\\
+P\brak{T_{4}} &= \frac{2}{5}\\
+P\brak{L|T_{1}} &= \frac{1}{4}\\
+P\brak{L|T_{2}} &= \frac{1}{3}\\
+P\brak{L|T_{3}} &= \frac{1}{12}\\
+P\brak{L|T_{4}} &= 0
+\end{align*} 
+
+\item To find the probability the doctor comes by train and he is late = $P\brak{T_1|L}$ using Baye's Theorem:
+
+\begin{tiny}
+\begin{align*}
+P\brak{T_{1}|L} &= \frac{P\brak{T_1} \times P\brak{L|T_1}}{ P\brak{T_1} \times P\brak{L|T_1} + P\brak{T_2} \times P\brak{L|T_2} + P\brak{T_3} \times P\brak{L|T_3} + P\brak{T_4} \times P\brak{L|T_4} } 
+\end{align*}
+\end{tiny}
+
+\begin{align*}
+P\brak{T_{1}|L} &= \frac{ \frac{3}{10} \times \frac{1}{4} }{ \frac{3}{10} \times \frac{1}{4} + \frac{1}{5} \times \frac{1}{3} + \frac{1}{10} \times \frac{1}{12} + \frac{2}{5} \times 0 } \\\\
+&= \frac{\frac{3}{40}}{\frac{18}{40}}\\\\
+&= \frac{3}{40} \times \frac{120}{18}\\\\
+&= \frac{360}{720}\\\\
+&= \frac{1}{2}
+\end{align*}
+
+\newpage
+The python implementation:
+\begin{lstlisting}
+codes/example_prob/prob30.py
+\end{lstlisting}
+
+\end{enumerate}

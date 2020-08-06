@@ -1,0 +1,19 @@
+\renewcommand{\theequation}{\theenumi}
+
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item P(not A and not B) is:
+\begin{align*}
+&= 1-P\brak{A \cup B}\\
+P\brak{A \cup B} &= P\brak{A} + P\brak{B} - P\brak{A \cap B}\\
+&= 1-\brak{\frac{1}{4} + \frac{1}{2} - \frac{1}{8}}\\
+&= \frac{3}{8}
+\end{align*}
+
+The python implementation:
+\begin{lstlisting}
+codes/excercise_prob/prob37.py
+\end{lstlisting}
+
+\end{enumerate}

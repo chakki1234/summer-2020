@@ -1,0 +1,29 @@
+\renewcommand{\theequation}{\theenumi}
+
+\begin{theorem}
+Two events A and B are said to be independent if $P\brak{A \cap B} = P\brak{A}.P\brak{B}$.
+\end{theorem}
+
+
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item $P\brak{E \cap F}$:
+\begin{align}
+= \frac{1}{5} 
+\end{align}
+
+\item $P\brak{E}.P\brak{F}$:
+\begin{align}
+&=\frac{3}{5} \times \frac{3}{10}\\
+&= \frac{9}{50}
+\end{align}
+
+\item Since $P\brak{E \cap F}$ is not equal to $P\brak{E}.P\brak{F}$. Therefore A and B are not independent events.
+
+The python implementation:
+\begin{lstlisting}
+codes/excercise_prob/prob34.py
+\end{lstlisting}
+
+\end{enumerate}

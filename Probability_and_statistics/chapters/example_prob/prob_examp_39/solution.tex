@@ -1,0 +1,61 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item Let two white balls be denoted by $W_{1}, W_{2}$ and red ball by r. X is the number of red balls in two draws.
+
+\item Let X be the number of kings obtained. X can be 0, 1, 2.
+
+\item The total number of ways to draw 2 cards is $\comb{5}{2} = 1326$.
+
+\item $P\brak{X = 0}$:
+\begin{align}
+&= \comb{48}{2}\\
+&= 1128\\
+P\brak{X=0} &= \frac{Number\  of\  ways\ to\  get\ 0\ kings}{Total\ nummber\ of \ ways}\\
+&= \frac{1128}{1326}
+\end{align}
+
+\item $P\brak{X = 1}$:
+\begin{align}
+&= \comb{48}{1} \times \comb{4}{1}\\
+&= 4 \times 48 \\
+P\brak{X=1} &= \frac{Number\  of\  ways\ to\  get\ 1\ kings}{Total\ nummber\ of \ ways}\\
+&= \frac{192}{1326}
+\end{align}
+
+\item $P\brak{X = 2}$:
+\begin{align}
+&= \comb{4}{2} \\
+&= 6 \\
+P\brak{X=2} &= \frac{Number\  of\  ways\ to\  get\ 2\ kings}{Total\ nummber\ of \ ways}\\
+&= \frac{6}{1326}
+\end{align}
+
+\item Expectation value $E\brak{X}$ is given by:
+\begin{align}
+E\brak{X} &= \sum^n_{i=1} X_iP_i \\
+&= \frac{204}{1326}\\
+&= \frac{34}{221} 
+\end{align}
+
+\item To find $E\brak{X^2}$
+\begin{align}
+E\brak{X} &= \sum^n_{i=1} {X_i}^2P_i \\
+&= \frac{216}{1326}\\
+&= \frac{36}{221} 
+\end{align}
+
+\item Variance is given by: $Var\brak{X} = E\brak{X^2} - {E\brak{X}}^2$ 
+\begin{align}
+&= \frac{36}{221} - \brak{{\frac{34}{221}}}^2\\
+&= \frac{6800}{221^2}
+\end{align}
+
+The python implementation:
+\begin{lstlisting}
+codes/example_prob/prob39.py
+\end{lstlisting}
+
+
+\end{enumerate}

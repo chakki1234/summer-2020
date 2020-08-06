@@ -1,0 +1,56 @@
+\renewcommand{\theequation}{\theenumi}
+
+\begin{theorem}
+Two events A and B are said to be independent if $P\brak{A \cap B} = P\brak{A}.P\brak{B}$.
+\end{theorem}
+
+
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item The Sample Space is:
+\begin{align}
+\begin{bmatrix}
+\brak{1, R} & \brak{2, R} & \brak{3, R} & \brak{4, G} & \brak{5, G} & \brak{6, G} 
+\end{bmatrix}
+\end{align}
+
+\item Probability of event A:\\
+Favourable outcomes are:
+\begin{align}
+&\begin{bmatrix}
+\brak{2, R} & \brak{4, G} & \brak{6, G} 
+\end{bmatrix}\\
+&P\brak{A} = \frac{3}{6} = \frac{1}{2}
+\end{align}
+
+\item Probability of event B:\\
+Favourable outcomes are:
+\begin{align}
+\begin{bmatrix}
+\brak{1, R} & \brak{2, R} & \brak{3, R}  
+\end{bmatrix}\\
+P\brak{B} = \frac{3}{6} = \frac{1}{2}
+\end{align}
+
+\item $P\brak{A \cap B}$:
+\begin{align}
+A \cap B &= \brak{2, R}\\   
+P\brak{A \cap B} &= \frac{1}{6} 
+\end{align}
+
+\item $P\brak{A}.P\brak{B}$:
+\begin{align}
+&=\frac{1}{2} \times \frac{1}{2}\\
+&= \frac{1}{4}
+\end{align}
+
+\item Since $P\brak{A \cap B}$ is not equal to $P\brak{A}.P\brak{B}$. Therefore A and B are not independent events.
+
+The python implementation:
+\begin{lstlisting}
+codes/excercise_prob/prob33.py
+\end{lstlisting}
+
+
+\end{enumerate}

@@ -1,0 +1,131 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item To find the Mode $= l + \frac{f_1 - f_0}{2f_1 - f_0 - f_2} \times h$:
+
+\item Where:
+\begin{align*}
+Modal\ class &= interval\ with\ highest\ frequency\\
+l &= lower\ limit\ of\ modal\ class\\
+h &= class\ interval\\
+f_1 &= frequency\ with\ modal\ class\\
+\begin{split}
+f_0 &= frequency\ of\ class\ \\ &before\ modal\ class
+\end{split}\\
+\begin{split}
+f_2 &= frequency\ of\ class\ \\ &after\ modal\ class
+\end{split}
+\end{align*}
+
+\item 
+\begin{align}
+Modal\ class &= 30 - 35\\ 
+l &= 30\\
+h &= 20 - 15 = 5\\
+f_1 &= 10\\
+f_0 &= 9\\
+f_2 &= 3\\
+Mode &= 30 + \frac{10-9}{2\brak{10} - 9 - 3} \times 5\\
+&= 30.625
+\end{align}
+
+\item $Mean = a + h \times \frac{\sum f_i u_i}{\sum f_i}$
+
+\item Where:
+\begin{align*}
+h &= class\ interval = 20 - 15 = 5 \\
+\begin{split}
+a &= assumed\ mean\\
+&= mean\ of\ class\ 35-40\\
+&= 37.5 
+\end{split}\\
+u_i &= \frac{x_i-a}{h}
+\end{align*}
+
+\item To calculate class mark - $x_i$, $x_i - a$, $u_i$ and $f_i \times u_i$
+\begin{enumerate}
+
+\item For the class $15-20$:
+\begin{align*}
+class\ mark &= \frac{15+20}{2} = 17.5\\
+x_i - a &= 17.5-37.5 = -20\\
+u_i &= \frac{-20}{5} = -4 \\
+f_i \times u_i &= 3 \times -4 = -12 
+\end{align*}
+
+\item For the class $20-25$:
+\begin{align*}
+class\ mark &= \frac{20+25}{2} = 22.5\\
+x_i - a &= 22.5-37.5 = -15\\
+u_i &= \frac{-15}{5} = -3\\ 
+f_i \times u_i &= 8 \times -3 = -24 
+\end{align*}
+
+\item For the class $25-30$:
+\begin{align*}
+class\ mark &= \frac{25+30}{2} = 27.5\\
+x_i - a &= 27.5-37.5 = -10\\
+u_i &= \frac{-10}{5} = -2\\ 
+f_i \times u_i &= 9 \times -2 = -18 
+\end{align*}
+
+\item For the class $30-35$:
+\begin{align*}
+class\ mark &= \frac{30+35}{2} = 32.5\\
+x_i - a &= 32.5-37.5 = -5\\
+u_i &= \frac{-5}{5} = -1\\ 
+f_i \times u_i &= 10 \times -1 = -10 
+\end{align*}
+
+\item For the class $35-40$:
+\begin{align*}
+class\ mark &= \frac{35+40}{2} = 37.5\\
+x_i - a &= 37.5-37.5 = 0\\
+u_i &= \frac{0}{5} = 0 \\
+f_i \times u_i &= 3 \times 0 = 0 
+\end{align*}
+
+\item For the class $40-45$:
+\begin{align*}
+class\ mark &= \frac{40+45}{2} = 42.5\\
+x_i - a &= 42.5-37.5 = 5\\
+u_i &= \frac{5}{5} = 1 \\
+f_i \times u_i &= 0 \times 1 = 0 
+\end{align*}
+
+\item For the class $45-50$:
+\begin{align*}
+class\ mark &= \frac{45+50}{2} = 47.5\\
+x_i - a &= 47.5-37.5 = 10\\
+u_i &= \frac{10}{5} = 2\\ 
+f_i \times u_i &= 0 \times 2 = 0 
+\end{align*}
+
+\item For the class $50-55$:
+\begin{align*}
+class\ mark &= \frac{50+55}{2} = 52.5\\
+x_i - a &= 52.5-37.5 = 15\\
+u_i &= \frac{15}{5} = 3\\ 
+f_i \times u_i &= 2 \times 3 = 6 
+\end{align*}
+
+\end{enumerate}
+
+\item 
+\begin{align*}
+\sum f_i &= 35\\
+\sum f_i \times u_i &= -58\\
+\bar{x} &= 37.5 + 5 \times \frac{-58}{35}\\
+&=29.214
+\end{align*}
+
+\item Therefore most states have a student-teacher ratio $30.625$ and average student-teacher ratio is $29.214$.
+
+The python implementation:
+\begin{lstlisting}
+codes/13.py
+\end{lstlisting}
+
+
+\end{enumerate}

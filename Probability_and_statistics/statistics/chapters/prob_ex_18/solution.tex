@@ -1,0 +1,86 @@
+\renewcommand{\theequation}{\theenumi}
+
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item The given data has been reorganized and tabulated.
+
+\item $Median = l + h \times \frac{\frac{n}{2} - cf}{f} $
+
+\item Where:
+\begin{align*}
+n &= \sum f_i = 100 \\
+\frac{n}{2} &= \frac{100}{2} = 50\\
+&\therefore 35-40\ is\ the\ median\ class\\
+l &= lower\ limit\ of\ median\ class = 35\\
+h &= class\ interval = 25 - 20 = 5 \\
+\begin{split}
+cf &= cumulative\ frequency\ of\ the \\
+&class\ before\ median\ class 
+\end{split}\\
+f &= frequency of median class = 33
+\end{align*}
+
+\item To calculate Cumulative Frequency 
+\begin{enumerate}
+
+\item For the class $0-20$:
+\begin{align*}
+Cumulative\ Frequency &= 2
+\end{align*}
+
+\item For the class $20-25$:
+\begin{align*}
+Cumulative\ Frequency &= 2 + 4 = 6
+\end{align*}
+
+\item For the class $25-30$:
+\begin{align*}
+Cumulative\ Frequency &= 6 + 18 = 24 
+\end{align*}
+
+\item For the class $30-35$:
+\begin{align*}
+Cumulative\ Frequency &= 24 + 21 = 45  
+\end{align*}
+
+\item For the class $35-40$:
+\begin{align*}
+Cumulative\ Frequency &= 45 + 33 = 78
+\end{align*}
+
+\item For the class $40-45$:
+\begin{align*}
+Cumulative\ Frequency &= 78 + 11 = 89
+\end{align*}
+
+\item For the class $45-50$:
+\begin{align*}
+Cumulative\ Frequency &= 89 + 3 = 92
+\end{align*}
+
+\item For the class $50-55$:
+\begin{align*}
+Cumulative\ Frequency &= 92 + 6 = 98
+\end{align*}
+
+\item For the class $55-60$:
+\begin{align*}
+Cumulative\ Frequency &= 98 + 2 = 100
+\end{align*}
+
+\item $\therefore cf = 45 $
+\end{enumerate}
+
+\item To find the median:
+\begin{align*}
+Median &= 35 + \frac{50 - 45}{33} \times 5\\
+&= 35.76
+\end{align*}
+
+The python implementation:
+\begin{lstlisting}
+codes/prob18.py
+\end{lstlisting}
+
+\end{enumerate}

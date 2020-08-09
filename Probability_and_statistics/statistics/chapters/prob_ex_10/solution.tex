@@ -1,0 +1,94 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item $Mean = \frac{\sum f_i x_i}{\sum f_i}$
+
+\item To calculate class mark - $x_i$ and $f_i \times x_i$
+\begin{enumerate}
+
+\item For the class $5-15$:
+\begin{align*}
+class\ mark &= \frac{5+15}{2} = 10\\
+f_i \times x_i &= 6 \times 10 = 60 
+\end{align*}
+
+\item For the class $15-25$:
+\begin{align*}
+class\ mark &= \frac{15+25}{2} = 20\\
+f_i \times x_i &= 11 \times 20 = 220 
+\end{align*}
+
+\item For the class $25-35$:
+\begin{align*}
+class\ mark &= \frac{25+35}{2} = 30\\
+f_i \times x_i &= 21 \times 30 = 630 
+\end{align*}
+
+\item For the class $35-45$:
+\begin{align*}
+class\ mark &= \frac{35+45}{2} = 40\\
+f_i \times x_i &= 23 \times 40 = 920 
+\end{align*}
+
+\item For the class $45-55$:
+\begin{align*}
+class\ mark &= \frac{45+55}{2} = 50\\
+f_i \times x_i &= 14 \times 50 = 700 
+\end{align*}
+
+\item For the class $55-65$:
+\begin{align*}
+class\ mark &= \frac{55+65}{2} = 60\\
+f_i \times x_i &= 5 \times 60 = 300 
+\end{align*}
+
+\end{enumerate}
+
+%\begin{table}[ht!]
+%\centering
+%\input{./tables/prob_examp_10/sol}
+%\caption{Class Mark and $f_i \times x_i $ are tabulated}
+%\end{table} 
+
+\item Mean:
+\begin{align*}
+\sum f_i x_i &= 2830\\
+\sum f_i &= 80\\
+Mean &= \bar{x} = \frac{2830}{80}\\
+&= 35.375
+\end{align*}
+
+\item To find the Mode $= l + \frac{f_1 - f_0}{2f_1 - f_0 - f_2} \times h$: 
+
+\item Where:
+\begin{align*}
+Modal\ class &= interval\ with\ highest\ frequency\\
+l &= lower\ limit\ of\ modal\ class\\
+h &= class\ interval\\
+f_1 &= frequency\ with\ modal\ class\\
+\begin{split}
+f_0 &= frequency\ of\ class\ \\ &before\ modal\ class
+\end{split}\\
+\begin{split}
+f_2 &= frequency\ of\ class\ \\ &after\ modal\ class
+\end{split}
+\end{align*}
+
+\item 
+\begin{align}
+Modal\ class &= 35 - 45\\ 
+l &=  35\\
+h &= 10\\
+f_1 &= 23\\
+f_0 &= 21\\
+f_2 &= 14\\
+Mode &= 36.8
+\end{align}
+
+The python implementation:
+\begin{lstlisting}
+codes/prob10.py
+\end{lstlisting}
+
+\end{enumerate}

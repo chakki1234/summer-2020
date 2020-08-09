@@ -1,0 +1,91 @@
+\renewcommand{\theequation}{\theenumi}
+
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item The given data has been reorganized to a continous form and tabulated by the following procedure:
+\begin{align*}
+gap &= 127-126\\
+\frac{gap}{2} &= \frac{1}{2} = 0.5 
+\end{align*}
+$\therefore$ We need to add 0.5 to each upper class limit and subtact 0.5 from each lower class limit. 
+
+\item $Median = l + h \times \frac{\frac{n}{2} - cf}{f} $
+
+\item Where:
+\begin{align*}
+n &= \sum f_i = 40 \\
+\frac{n}{2} &= \frac{40}{2} = 20\\
+&\therefore 144.5-153.5\ is\ the\ median\ class\\
+l &= lower\ limit\ of\ median\ class = 144.5\\
+h &= class\ interval = 126.5 - 117.5 = 9 \\
+\begin{split}
+cf &= cumulative\ frequency\ of\ the \\
+&class\ before\ median\ class 
+\end{split}\\
+f &= frequency of median class = 12
+\end{align*}
+
+\item To calculate Cumulative Frequency 
+\begin{enumerate}
+
+\item For the class $117.5-126.5$:
+\begin{align*}
+Cumulative\ Frequency &= 3
+\end{align*}
+
+\item For the class $126.5-135.5$:
+\begin{align*}
+Cumulative\ Frequency &= 3 + 5 = 8
+\end{align*}
+
+\item For the class $135.5-144.5$:
+\begin{align*}
+Cumulative\ Frequency &= 8 + 9 = 17 
+\end{align*}
+
+\item For the class $144.5-153.5$:
+\begin{align*}
+Cumulative\ Frequency &= 17 + 12 = 29  
+\end{align*}
+
+\item For the class $153.5-162.5$:
+\begin{align*}
+Cumulative\ Frequency &= 29 + 5 = 34
+\end{align*}
+
+\item For the class $162.5-171.5$:
+\begin{align*}
+Cumulative\ Frequency &= 34 + 4 = 38
+\end{align*}
+
+\item For the class $171.5-180.5$:
+\begin{align*}
+Cumulative\ Frequency &= 38 + 2 = 40
+\end{align*}
+
+\item For the class $50-55$:
+\begin{align*}
+Cumulative\ Frequency &= 92 + 6 = 98
+\end{align*}
+
+\item For the class $55-60$:
+\begin{align*}
+Cumulative\ Frequency &= 98 + 2 = 100
+\end{align*}
+
+\item $\therefore cf = 17 $
+\end{enumerate}
+
+\item To find the median:
+\begin{align*}
+Median &= 144.5 + \frac{20 - 17}{12} \times 9\\
+&= 146.75
+\end{align*}
+
+The python implementation:
+\begin{lstlisting}
+codes/prob19.py
+\end{lstlisting}
+
+\end{enumerate}

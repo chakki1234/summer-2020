@@ -1,0 +1,78 @@
+\renewcommand{\theequation}{\theenumi}
+
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item $Median = l + h \times \frac{\frac{n}{2} - cf}{f} = 28.5$
+
+\item Where:
+\begin{align*}
+&20-30\ is\ the\ median\ class\\
+n &= \sum f_i = 60 \\
+\frac{n}{2} &= \frac{60}{2} = 30\\
+l &= lower\ limit\ of\ median\ class = 20\\
+h &= class\ interval = 10 - 0 = 10 \\
+\begin{split}
+cf &= cumulative\ frequency\ of\ the \\
+&class\ before\ median\ class 
+\end{split}\\
+f &= frequency of median class = 20
+\end{align*}
+
+\item To calculate Cumulative Frequency 
+\begin{enumerate}
+
+\item For the class $0-10$:
+\begin{align*}
+Cumulative\ Frequency &= 5
+\end{align*}
+
+\item For the class $10-20$:
+\begin{align*}
+Cumulative\ Frequency &= 5 + x 
+\end{align*}
+
+\item For the class $20-30$:
+\begin{align*}
+Cumulative\ Frequency &= 5 + x + 20 = 25 + x
+\end{align*}
+
+\item For the class $30-40$:
+\begin{align*}
+Cumulative\ Frequency &= 25 + x + 15 = 40 + x 
+\end{align*}
+
+\item For the class $40-50$:
+\begin{align*}
+Cumulative\ Frequency &= 40 + x + y
+\end{align*}
+
+\item For the class $50-60$:
+\begin{align*}
+\begin{split}
+Cumulative\ Frequency &= 40 + x + y + 5 \\
+&= 45 + x + y
+\end{split}
+\end{align*}
+
+\item $\therefore cf = 5 + x $
+\end{enumerate}
+
+\item To find the median:
+\begin{align*}
+28.5 &= 20 + \frac{30 - \brak{5 + x}}{20} \times 10\\
+x &= 8
+\end{align*}
+
+\item To find $y$:
+\begin{align}
+\sum f_i &= 5 + x + 20 + 15 + y + 5\\
+y &= 7
+\end{align}
+
+The python implementation:
+\begin{lstlisting}
+codes/17.py
+\end{lstlisting}
+
+\end{enumerate}

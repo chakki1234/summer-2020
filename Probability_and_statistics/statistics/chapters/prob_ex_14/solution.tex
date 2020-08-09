@@ -1,0 +1,38 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item To find the Mode $= l + \frac{f_1 - f_0}{2f_1 - f_0 - f_2} \times h$:
+
+\item Where:
+\begin{align*}
+Modal\ class &= interval\ with\ highest\ frequency\\
+l &= lower\ limit\ of\ modal\ class\\
+h &= class\ interval\\
+f_1 &= frequency\ with\ modal\ class\\
+\begin{split}
+f_0 &= frequency\ of\ class\ \\ &before\ modal\ class
+\end{split}\\
+\begin{split}
+f_2 &= frequency\ of\ class\ \\ &after\ modal\ class
+\end{split}
+\end{align*}
+
+\item 
+\begin{align}
+Modal\ class &= 4000 - 5000\\ 
+l &= 4000\\
+h &= 4000 - 3000 = 1000\\
+f_1 &= 18\\
+f_0 &= 4\\
+f_2 &= 9\\
+Mode &= 4000 + \frac{18-4}{2\brak{18} - 4- 9} \times 1000\\
+&= 4608.69
+\end{align}
+
+The python implementation:
+\begin{lstlisting}
+codes/14.py
+\end{lstlisting}
+
+\end{enumerate}

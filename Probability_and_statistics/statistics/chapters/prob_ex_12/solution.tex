@@ -1,0 +1,137 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}
+\numberwithin{equation}{enumi}
+
+\item To find the Mode $= l + \frac{f_1 - f_0}{2f_1 - f_0 - f_2} \times h$:
+
+\item Where:
+\begin{align*}
+Modal\ class &= interval\ with\ highest\ frequency\\
+l &= lower\ limit\ of\ modal\ class\\
+h &= class\ interval\\
+f_1 &= frequency\ with\ modal\ class\\
+\begin{split}
+f_0 &= frequency\ of\ class\ \\ &before\ modal\ class
+\end{split}\\
+\begin{split}
+f_2 &= frequency\ of\ class\ \\ &after\ modal\ class
+\end{split}
+\end{align*}
+
+\item
+\begin{align}
+Modal\ class &= 1500 - 2000\\ 
+l &= 1500\\
+h &= 1500-1000 = 500\\
+f_1 &= 40\\
+f_0 &= 24\\
+f_2 &= 33\\
+Mode &= 1500 + \frac{40-24}{2\brak{40} - 24 - 33} \times 500\\
+&= 1847.83
+\end{align}
+
+\item $Mean = a + h \times \frac{\sum f_i u_i}{\sum f_i}$
+
+\item Where:
+\begin{align*}
+h &= class\ interval = 1500 - 1000 = 500 \\
+\begin{split}
+a &= assumed\ mean \\
+&= mean\ of\ 3000-3500 = 3250
+\end{split}\\
+u_i &= \frac{x_i-a}{h}
+\end{align*}
+
+\item To calculate class mark - $x_i$, $x_i - a$, $u_i$ and $f_i \times u_i$
+\begin{enumerate}
+
+\item For the class $1000-1500$:
+\begin{align*}
+class\ mark &= \frac{1000+1500}{2} = 1250\\
+x_i - a &= 1250-3250 = -2000\\
+u_i &= \frac{-2000}{500} = -4 \\
+f_i \times u_i &= 24 \times -4 = -96 
+\end{align*}
+
+\item For the class $1500-2000$:
+\begin{align*}
+class\ mark &= \frac{1500+2000}{2} = 1750\\
+x_i - a &= 1750-3250 = -1500\\
+u_i &= \frac{-1500}{500} = -3\\ 
+f_i \times u_i &= 40 \times -3 = -120 
+\end{align*}
+
+\item For the class $2000-2500$:
+\begin{align*}
+class\ mark &= \frac{2000+2500}{2} = 2250\\
+x_i - a &= 2250-3250 = -1000\\
+u_i &= \frac{-1000}{500} = -2\\ 
+f_i \times u_i &= 33 \times -2 = -66 
+\end{align*}
+
+\item For the class $2500-3000$:
+\begin{align*}
+class\ mark &= \frac{2500+3000}{2} = 2750\\
+x_i - a &= 2750-3250 = -500\\
+u_i &= \frac{-500}{500} = -1\\ 
+f_i \times u_i &= 28 \times -1 = -28 
+\end{align*}
+
+\item For the class $3000-3500$:
+\begin{align*}
+class\ mark &= \frac{3000+3500}{2} = 3250\\
+x_i - a &= 3250-3250 = 0\\
+u_i &= \frac{0}{500} = 0 \\
+f_i \times u_i &= 30 \times 0 = 0 
+\end{align*}
+
+\item For the class $3500-4000$:
+\begin{align*}
+class\ mark &= \frac{3500+4000}{2} = 3750\\
+x_i - a &= 3750-3250 = 500\\
+u_i &= \frac{500}{500} = 1 \\
+f_i \times u_i &= 22 \times 1 = 22 
+\end{align*}
+
+\item For the class $4000-4500$:
+\begin{align*}
+class\ mark &= \frac{4000+4500}{2} = 4250\\
+x_i - a &= 4250-3250 = 1000\\
+u_i &= \frac{1000}{500} = 2\\ 
+f_i \times u_i &= 16 \times 2 = 32 
+\end{align*}
+
+\item For the class $4500-5000$:
+\begin{align*}
+class\ mark &= \frac{4500+5000}{2} = 4750\\
+x_i - a &= 4750-3250 = 1500\\
+u_i &= \frac{1500}{500} = 3\\ 
+f_i \times u_i &= 7 \times 3 = 21 
+\end{align*}
+
+\end{enumerate}
+
+%\begin{table}[ht!]
+%\centering
+%\input{./tables/prob_examp_12/sol}
+%\caption{$x_i$, $ x_i - a$, $u_i$ and $f_i \times u_i $ are tabulated}
+%\end{table} 
+
+
+\item 
+\begin{align*}
+\sum f_i &= 200\\
+\sum f_i \times u_i &= -235\\
+\bar{x} &= 3250 + 500 \times \frac{-235}{200}\\
+&=2662.5
+\end{align*}
+
+\item The modal montly expenditure of families is Rs$1847.83$ and the mean monthly expenditure is Rs$2662.5$
+
+The python implementation:
+\begin{lstlisting}
+codes/prob12.py
+\end{lstlisting}
+
+
+\end{enumerate}

@@ -4,8 +4,6 @@ from scipy.stats import bernoulli
 import seaborn as sns
 from math import comb
 
-
-
 prob_A = 1/2
 prob_A_cup_B = 3/5
 

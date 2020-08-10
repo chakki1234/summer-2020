@@ -41,13 +41,16 @@ def median(sheet):
     filter_cf = cf[cf >= n_by_2]
     index, = np.where(cf == filter_cf[0])
     index = index[0]
-    
-    class_limits = np.fromstring( sheet.cell_value(index+1 , 0) , dtype=int, sep='-')
+
+    class_limits = np.fromstring( sheet.cell_value(index+1 , 0) , dtype=float, sep='-')
     l = class_limits[0]
     h = class_limits[1] - class_limits[0]
     
     return l + (n_by_2 - cf[index-1])*h/f[index] 
 
+def to_get_numbers(sheet):
+    f = np.array([sheet.cell_value(i, 1) for i in range(1, sheet.nrows) if type(sheet.cell_value(i, 1)) is not str])
+    return np.sum(f)
 
 #########################################################
 
